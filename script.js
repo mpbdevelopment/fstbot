@@ -103,7 +103,7 @@ window.onload = function() {
     console.log("SessionID Generated:", globalUniqueId);
   
     // URL of the text file you want to read
-    const docUrl = 'https://script.google.com/macros/s/AKfycbx2Oq6Og9pB5DqJBF5j-k_aVbEDGOYSwsK5sjAIGL6ntK7hl6ZH9tWBDeIb_3rFMACS/exec';
+    const docUrl = 'https://script.google.com/macros/s/AKfycbwMQKiQqCnztdtQyxhRJ_nDPFI7WUCteAqzHu6A_cQnKtRhYYG4OgAtFfpM1zA5Xdr96Q/exec';
 
     fetch(docUrl)
       .then(response => {
@@ -191,14 +191,14 @@ async function sendToGPT4() {
         const chatDiv = document.getElementById('chat');
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message', sender);
-        messageDiv.innerHTML = `${sender === 'user' ? 'You' : 'CM'}: ${formatResponse(text)}`;
+        messageDiv.innerHTML = `${sender === 'user' ? 'You' : 'FST'}: ${formatResponse(text)}`;
         chatDiv.appendChild(messageDiv);
         chatDiv.scrollTop = chatDiv.scrollHeight; // Auto-scroll to the latest message
     }
     
     // Function to log conversation to Google Sheets
     async function logConversation(userMessage, botMessage) {
-        const scriptUrl = 'https://script.google.com/macros/s/AKfycbx4w2T7hOVwnuVyh19pFCnBtLg_1fCpysTNbp2ZrJBu1FW_SXgcl2hoZCdtq4wPTEvh/exec';
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbzKvE5ttE_D72jh_YdDTXLaktUaVVqRc3M8ygJJc9-3BkBA2IubJN9W0CR9Qyu15WfWlw/exec';
         const payload = { sessionId: globalUniqueId, user: userMessage, bot: botMessage };
     
         fetch(scriptUrl, {
