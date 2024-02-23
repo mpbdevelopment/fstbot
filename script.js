@@ -128,8 +128,7 @@ async function sendToGPT4() {
     document.getElementById("loadingSpinner").style.display = "block";
     const userInputField = document.getElementById('userInput');
     const userPrompt = userInputField.value.trim();
-    //const apiKey = await fetchApiKey();
-    const apiKey = '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'
+    const apiKey = await fetchApiKey();
     const url = "https://api.openai.com/v1/chat/completions";
 
     if (!userPrompt) {
