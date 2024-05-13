@@ -141,7 +141,7 @@ async function sendToGPT4() {
 
 
     const payload = {
-        model: 'gpt-4-turbo-preview',
+        model: 'gpt-4o',
         messages: [...conversationHistory, {
             "role": "system",
             "content": docContent
